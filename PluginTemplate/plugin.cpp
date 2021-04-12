@@ -68,7 +68,7 @@ static duint ismystring(int argc, duint* argv, void* userdata)
 	} else if (protector.empty()) {
 		_plugin_logprintf("[" PLUGIN_NAME "] You need to set a string with code %d (use setString)\n", argv[1]);
 		return false;
-	} else if (argv[1] < 1 && argv[1] > 2) {
+	} else if (argv[1] < 1 || argv[1] > 2) {
 		_plugin_logprintf("[" PLUGIN_NAME "] Second argument only supports 1 or 2 (or $ANSI and $UNICODE) to set the string type.\n");
 		return false;
 	}
